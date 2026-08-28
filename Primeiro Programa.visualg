@@ -1,0 +1,40 @@
+algoritmo "Calcular área"
+
+var
+
+  base: real
+  altura: real
+  resultado: real
+  opcao: inteiro
+
+inicio
+
+   escreval("1 - quadrilatero")
+   escreval("2 - triangulo")
+    leia(opcao)
+
+  escolha(opcao)
+   caso 1
+
+    escreval("insira a base do quadrilatero")
+      leia(base)
+    escreval("insira a altura do quadrilatero")
+      leia(altura)
+      
+      resultado <- base * altura
+      
+    escreval("essa é a area do quadrilatero ", resultado)
+
+   caso 2
+
+    escreval("insira a base do triangulo")
+      leia(base)
+    escreval("insira a altura do triangulo")
+      leia(altura)
+
+    resultado <- (base * altura) / 2
+
+    escreval("essa é a area do triangulo ", resultado)
+
+  fimescolha
+fimalgoritmo
