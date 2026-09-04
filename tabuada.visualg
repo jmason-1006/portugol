@@ -1,0 +1,18 @@
+algoritmo "Tabuada"
+
+var
+  contador: inteiro
+  resultado: inteiro
+  numero: inteiro
+
+inicio
+  contador <- 1
+  escreval("Insira um número: ")
+  leia(numero)
+  para contador de 1 ate 10 faca
+    resultado <- contador * numero
+    escreval(numero, " X ", contador, " = ", resultado)
+  fimpara
+
+
+fimalgoritmo
