@@ -1,0 +1,27 @@
+algoritmo "vetor_busca"
+
+var
+  nome: caractere
+  nomes: vetor[0..4] de caractere
+  contador: inteiro
+
+inicio
+  contador <- 1
+  para contador de 1 ate 5 faca
+  escreval("Cadastre o nome do aluno ", contador)
+  leia(nomes[contador - 1])
+  fimpara
+
+  escreval("qual nome você deseja procurar nos registros?")
+  leia(nome)
+  contador <- 1
+  enquanto nome <> nomes[contador -1] faca
+    escreval("Nome não encontrado na posição " contador, " do vetor")
+    contador <- contador + 1
+  fimenquanto
+
+  escreval("o nome ", nome, " foi encontrado na posição ", contador " do vetor")
+
+
+
+fimalgoritmo
