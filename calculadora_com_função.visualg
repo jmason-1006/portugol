@@ -1,0 +1,61 @@
+algoritmo "calculadora feita usando funcao"
+
+var
+  n1: real
+  n2: real
+  resultado: real
+  op: caractere
+
+funcao soma(a, b: real): real
+  inicio
+    retorne a + b
+fimfuncao
+
+funcao sub(a, b: real): real
+  inicio
+    retorne a - b
+fimfuncao
+
+funcao multi(a, b: real): real
+  inicio
+    retorne a * b
+fimfuncao
+
+funcao divi(a, b: real): real
+  inicio
+    retorne a / b
+fimfuncao
+
+inicio
+  escreval("Calculadora")
+  escreval()
+  escreval("Digite o primeiro número: ")
+  leia(n1)
+  escreval("Escolha a operação (+, -, *, /): ")
+  leia(op)
+  escreval("Digite o segundo número")
+  leia(n2)
+
+  escolha op
+    caso "+"
+      resultado <- soma(n1, n2)
+
+    caso "-"
+      resultado <- sub(n1, n2)
+
+    caso "*"
+      resultado <- multi(n1, n2)
+
+    caso "/"
+      se n2 = 0 entao
+        escreval("Não é possível dividir por zero.")
+      senao
+        resultado <- divi(n1, n2)
+      fimse
+    outrocaso
+      escreval("Operação inválida.")
+  fimescolha
+
+  escreval("Resultado: ", resultado)
+
+fimalgoritmo
