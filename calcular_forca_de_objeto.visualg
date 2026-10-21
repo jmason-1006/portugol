@@ -1,0 +1,22 @@
+algoritmo "calcular_forca_de_um_objeto"
+
+var
+ m: real
+ a: real
+ f: real
+
+inicio
+  escreval("Calcule a força do objeto desejado!")
+
+  escreval("Insira a massa (M) do objeto: ")
+  leia(m)
+
+  escreval("Insira a aceleração (A) do objeto: ")
+  leia(a)
+
+  f <- m * a
+
+  escreval("A força (N) do objeto é: " f)
+
+
+fimalgoritmo

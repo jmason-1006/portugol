@@ -1,0 +1,21 @@
+algoritmo "calcular_media_entre_dois_numeros"
+
+var
+ n1: real
+ n2: real
+ resultado: real
+
+inicio
+ escreval("Bem vindo ao calculador de média!")
+
+ escreval("Digite o primeiro número desejado: ")
+ leia(n1)
+ escreval("Digite o segundo número desejado: ")
+ leia(n2)
+
+  resultado <- (n1 + n2) / 2
+
+ escreva("O resultado da sua média foi " resultado) 
+
+
+fimalgoritmo

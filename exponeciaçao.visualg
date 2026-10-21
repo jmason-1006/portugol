@@ -1,0 +1,20 @@
+algoritmo "Calcular_Exponenciacao"
+
+var
+  base: inteiro
+  p: inteiro
+  resultado: inteiro
+
+inicio
+
+  escreval("Calcular Exponenciação")
+    escreval("Insira sua base (número): ")
+      leia(base)
+    escreval("Insira o expoente (multiplicador): ")
+      leia(p)
+
+    resultado <- base ^ p
+    limpatela
+  escreval("Seu resultado é: ", resultado)
+
+fimalgoritmo

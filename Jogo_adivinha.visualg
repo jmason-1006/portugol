@@ -1,0 +1,71 @@
+algoritmo "Jogo_de_Adivinhacao"
+
+var
+  palavra: caractere
+  dica: caractere
+  p: inteiro                 
+  opcao: caractere
+  resp: caractere            
+  contador: inteiro
+  acerto: logico
+
+inicio
+  escreval(" JOGO DE ADIVINHAÇÃO")
+  escreval("O JOGADOR 1 escolhe uma palavra relacionada a qualquer coisa para ser adivinhada, uma dica para ajudar a descobrir e quantas tentativas vão ser necessárias para o JOGADOR 2 descobrir a palavra.")
+  escreval("Se o JOGADOR 2 acertar a palavra antes do limite de tentativas que o JOGADOR 1 definiu, a vitória é do JOGADOR 2.")
+  escreval("Se o JOGADOR 2 descobrir a palavra exatamente no limite de tentativas que o JOGADOR 1 definiu, a vitória é do JOGADOR 1.")
+  escreval("Se o JOGADOR 2 não conseguir descobrir a palavra dentro do limite de tentativas que o JOGADOR 1 decidiu, é empate.")
+  escreval()
+  
+  escreval("Insira a palavra para ser adivinhada: ")
+    leia(palavra)
+  escreval("Insira uma dica relacionada: ")
+    leia(dica)
+  escreval("Em quantas tentativas ela vai ser adivinhada? ")
+    leia(p)
+  
+  limpatela
+  escreval("Dica cadastrada: ", dica)
+  escreval("Número de tentativas máximo: ", p)
+  escreval()
+  
+  escreva("Começar o jogo? 'S' para SIM e 'N' para NÃO: ")
+    leia(opcao)
+  opcao <- maiusc(opcao)
+  
+  se (opcao = "S") entao
+     acerto <- falso
+
+     para contador de 1 ate p faca
+        limpatela
+        escreval("=== VEZ DO JOGADOR 2 ===")
+        escreval("Sua dica é: ", dica)
+        escreval("Tentativa: ", contador, " de ", p)
+        escreva("Qual é a palavra? ")
+          leia(resp)
+              
+        se (maiusc(resp) = maiusc(palavra)) entao
+           acerto <- verdadeiro
+           interrompa 
+        fimse
+     fimpara
+     
+     limpatela
+     se (acerto = verdadeiro) entao
+
+        se (contador < p) entao
+           escreval("Parabéns JOGADOR 2! Você acertou na tentativa ", contador, " e venceu!")
+        senao
+
+           escreval("Você acertou na última tentativa (", contador, ")! Vitória do JOGADOR 1!")
+        fimse
+     senao
+
+        escreval("O tempo acabou! A palavra era: ", palavra)
+        escreval("EMPATE!")
+     fimse
+
+  senao
+     escreval("Programa encerrado.")
+  fimse
+fimalgoritmo

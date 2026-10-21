@@ -1,0 +1,26 @@
+algoritmo "calcular_media_de_varios_numeros"
+
+var
+ quant: inteiro
+ n: vetor[0..100] de inteiro
+ resultado: real
+ contador:inteiro
+
+inicio
+  quant <- 0
+  contador <- 0
+  resultado <- 0
+
+  escreval("Insira quantos números você vai usar: " )
+  leia(quant)
+
+  para contador de 1 ate quant faca
+    escreval("Insira o número: ")
+    leia(n[contador])
+
+    resultado <- resultado + n[contador]
+  fimpara
+
+   resultado <- resultado / quant 
+   escreval("Sua média é " resultado)
+fimalgoritmo

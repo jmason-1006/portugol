@@ -1,0 +1,34 @@
+algoritmo "Tabuada"
+var
+  contador: inteiro
+  resultado: inteiro
+  numero: inteiro
+  opcao: caractere
+inicio
+  repita
+    contador <- 1
+    numero <- 1
+      escreval("Deseja ver a tabuada de 1 a 10?")
+
+      escreval("Digite 'S' para sim e 'N' para não:  ")
+      leia(opcao)
+      limpatela
+    se (opcao = "S") entao
+      enquanto numero < 11 faca
+        para contador de 1 ate 10 faca
+          resultado <- contador * numero
+          escreval("|", numero, " X ", contador, " = ", resultado, "|")
+        fimpara
+
+          numero <-  1 + numero
+          escreval()
+      fimenquanto
+    fimse
+
+    se (opcao = "N") entao
+      limpatela
+      escreval("Programa encerrado")
+    fimse
+
+  ate opcao = "N" ou opcao = "S"
+fimalgoritmo
